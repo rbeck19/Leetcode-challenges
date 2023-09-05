@@ -30,22 +30,28 @@ var intersection = function(nums1, nums2) {
 
     // return dup
 
-        const output = [];
-    const hashmap = new Map();
-    
-    for (let i = 0; i < nums1.length; i++) {
-        hashmap.set(nums1[i], i);
-    }
-    
-    for (let i = 0; i < nums2.length; i++) {
-        const num = nums2[i];
-        if (hashmap.has(num)) {
-            output.push(num);
-            hashmap.delete(num);
+
+
+
+    let dup = []
+
+   if (nums1.length <= nums2.length) {
+        for (let i = 0; i < nums1.length; i++ ) {
+            if (nums2.includes(nums1[i])) {
+                dup.push(nums1[i])
+            }
+        }
+    } else {
+        for (let i = 0; i < nums2.length; i++ ) {
+            if (nums1.includes(nums2[i])) {
+                dup.push(nums2[i])
+            }
         }
     }
-    
-    return output;
+
+    let varDup = [...new Set(dup)]
+
+    return (varDup)
 
 };
 
