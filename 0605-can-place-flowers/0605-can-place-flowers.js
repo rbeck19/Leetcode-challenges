@@ -12,6 +12,7 @@ var canPlaceFlowers = function(flowerbed, n) {
       continue
     }
     //check if the space before and after are available 
+    //if available place 1 in the spot to be used a place holder 
     if( ( flowerbed[i - 1] == undefined || flowerbed[i - 1] == 0 ) && ( flowerbed[i + 1] == undefined || flowerbed[i + 1] == 0 ) ) {
       console.log("i= " + i)
       flowerbed[i] = 1
