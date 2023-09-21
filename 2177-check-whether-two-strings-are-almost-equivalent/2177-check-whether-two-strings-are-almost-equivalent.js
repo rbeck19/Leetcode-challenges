@@ -23,10 +23,6 @@ var checkAlmostEquivalent = function(word1, word2) {
         }
     }
 
-    console.log(hashmap1)
-    console.log(hashmap2)
-
-    
     //loop through hashmap 1
     for (let key in hashmap1) {
         if(hashmap2.hasOwnProperty(key) && Math.abs(hashmap1[key] - hashmap2[key]) > 3) {
@@ -47,5 +43,4 @@ var checkAlmostEquivalent = function(word1, word2) {
     }
 
     return true
-
 };
