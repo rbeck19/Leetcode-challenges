@@ -11,7 +11,10 @@ var longestConsecutive = function(nums) {
     let longest = 0
     let counter = 1
     
-
+    //loop through sorted array without duplicates
+    //IF current index and the next are consecutive add counter
+    //ELSE reset counter
+    //IF counter is greater or equal to longest set longest to counter
     for(let i = 0; i < sort.length; i++) {
         if(sort[i] + 1 == sort[i + 1]) {
             counter++
@@ -22,9 +25,6 @@ var longestConsecutive = function(nums) {
             longest = counter
         }
     }
-    console.log(sortDup)
-    console.log(sort)
-    console.log(longest)
 
     return longest
 };
