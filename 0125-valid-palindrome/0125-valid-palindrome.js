@@ -8,7 +8,7 @@ var isPalindrome = function(s) {
     //change characters to lower case
     let noSpecialChars = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
     //reverse the string
-    let reversed = noSpecialChars.split("").reverse().join("")
+    //let reversed = noSpecialChars.split("").reverse().join("")
 
-    return noSpecialChars == reversed
+    return noSpecialChars == noSpecialChars.split("").reverse().join("")
 };
