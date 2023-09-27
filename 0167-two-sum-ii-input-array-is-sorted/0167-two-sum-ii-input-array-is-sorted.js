@@ -29,13 +29,25 @@ var twoSum = function(numbers, target) {
 
     // return output.sort((a,b)=>a-b)
 
-  let map = new Map()
-    for(let i=0; i<numbers.length; i++){
-        let diff = target - numbers[i]
-        if(map.has(diff)){
-            return [map.get(diff)+1, i+1]
-        } else {
-            map.set(numbers[i], i)
+//   let map = new Map()
+//     for(let i=0; i<numbers.length; i++){
+//         let diff = target - numbers[i]
+//         if(map.has(diff)){
+//             return [map.get(diff)+1, i+1]
+//         } else {
+//             map.set(numbers[i], i)
+//         }
+//     }
+
+    let p1 = 0;
+    let p2 = numbers.length - 1;
+    while(numbers[p1] + numbers[p2] !== target){
+        if(numbers[p1] + numbers[p2] > target){
+            p2--;
+        }else{
+            p1++;
         }
     }
+    return [p1+1, p2+1];
+
 };
