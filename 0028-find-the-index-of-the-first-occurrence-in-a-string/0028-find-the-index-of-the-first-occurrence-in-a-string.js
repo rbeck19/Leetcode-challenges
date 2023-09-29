@@ -5,8 +5,8 @@
  */
 var strStr = function(haystack, needle) {
     
-    let indexOf = haystack.indexOf(needle)
+    //let indexOf = haystack.indexOf(needle)
 
-    return indexOf
+    return haystack.indexOf(needle)
 
 };
