@@ -20,4 +20,22 @@ for (let i = 1; i <= x/2; i++) {
         return i
     }
 }
+
+
+//    let left = 0, right = x
+//      while(right >= left){
+//          let mid= left + Math.floor((right-left)/2)
+//          if(midmid> x){
+//              right = mid -1
+//          } else if (midmid<x){
+//              if ((mid+1)(mid+1)>x){
+//                  return mid
+//              }
+//              left = mid +1
+//          } else if (midmid === x){
+//              return mid
+//          }
+//      } 
+//      return mid 
+
 };
