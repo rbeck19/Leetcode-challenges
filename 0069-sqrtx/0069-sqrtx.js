@@ -4,21 +4,20 @@
  */
 var mySqrt = function(x) {
 
-let mid = x / 2
 
+//test case if x is 1 return 1
 if(x == 1) {
     return x
 }
-if(mid * mid == x) {
-    return mid
-}
 
-for (let i = 1; i <= mid; i++) {
+if((x/2) * (x/2) == x) {
+    return x/2
+}
+for (let i = 1; i <= x/2; i++) {
     if(i * i < x && (i+1)*(i+1) > x) {
         return i
     } else if ( i * i == x) {
         return i
     }
 }
-
 };
