@@ -18,8 +18,6 @@ var groupAnagrams = function(strs) {
         }
     }
 
-    console.log(Object.values(hashmap))
-
     //return the values of all keys in the hashmap
     return Object.values(hashmap)
 };
