@@ -15,7 +15,9 @@ var relativeSortArray = function(arr1, arr2) {
         output.push(...arr1.filter(num => num == arr2[i]))
     }
 
-    output.push(...temp.sort((a,b)=> a-b))
+    temp = temp.sort((a,b)=> a-b)
+
+    output.push(...temp)
 
     return output
 
