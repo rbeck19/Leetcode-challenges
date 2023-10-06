@@ -5,7 +5,8 @@
 var groupAnagrams = function(strs) {
     
     // create a an array of strs where each word is sorted aplhibeticaly
-    const sortedStrs = strs.map( word => word.split("").sort().join("") )       
+    const sortedStrs = strs.map( word => word.split("").sort().join("") )     
+    //set the hashmap object   
     const hashmap = {}
 
     //loop through the sortedString array
