@@ -7,30 +7,21 @@ var findTheDifference = function(s, t) {
     
 //     let strS = s.split("").sort().join("")
 //     let strT = t.split("").sort().join("")
-
 //     let min = 0
 //     let max = strT.length - 1
-
 //     //for cases of only one letter
 //     if(strS.length == 1 && strS[0] == strT[0]){
 //         return strT[1]
 //     } else if(strS.length == 1 && strS[0] == strT[1]){
 //         return strT[0]
 //     }
-
-// console.log(strS)
-// console.log(strT)
-
 //     while(min <= max){
-//         console.log(strS[max-1] , strT[max])
-
 //         //check the start
 //         if(strS[min] != strT[min]) {
 //             return strT[min]
 //         }
 //         //check the end
 //         if(strS[max] == undefined) {
-            
 //         } else if(strS[(max)] != strT[max]){
 //             return strT[max]
 //         }
@@ -38,7 +29,6 @@ var findTheDifference = function(s, t) {
 //         min++
 //         max--
 //     }
-
 
 
 
