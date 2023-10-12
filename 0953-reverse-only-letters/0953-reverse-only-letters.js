@@ -8,10 +8,7 @@ var reverseOnlyLetters = function(s) {
 
   let newS = ""
 
-  console.log(string)
-
   let patern = /[A-Za-z]/
-
 
   let counter = 0
   for(let i = 0; i < s.length; i ++) {
