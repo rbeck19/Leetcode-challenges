@@ -6,13 +6,11 @@
 var join = function(arr1, arr2) {
     
     const hashmap = {}
-
     //loop through first arr and set up hashmap 
     for( let key in arr1) {
         //set key as ID containing the object
         hashmap[arr1[key].id] = arr1[key]
     }
-
     //loop through secong arr and add the Object if key does not exist otherwise overwite it
     for(let key in arr2){
         if(!hashmap[arr2[key].id]){
@@ -35,5 +33,8 @@ var join = function(arr1, arr2) {
     }
 
     return Object.values(hashmap)
+
+
+
 
 };
