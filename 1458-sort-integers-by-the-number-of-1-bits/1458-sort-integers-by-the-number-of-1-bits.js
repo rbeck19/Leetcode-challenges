@@ -4,10 +4,11 @@
  */
 var sortByBits = function(arr) {
     
+    //sort the array in acending order
     arr = arr.sort((a,b)=>a-b)
     const hashmap = {}
 
-    //get the number of 1's in binary code
+    //function to get the number of 1's in binary code
     function countBits(n) {
         let count = 0
         while(n){
@@ -17,9 +18,11 @@ var sortByBits = function(arr) {
         return count
     }
 
+    //create a hashmap of:
+    //Key: number of Bits
+    //Value: number
     for(let num in arr) {
         let bitCount = countBits(arr[num])
-        //console.log(arr[num], bitCount)
         if(!hashmap[bitCount]) {
             hashmap[bitCount] = [arr[num]]
         } else {
@@ -27,16 +30,11 @@ var sortByBits = function(arr) {
         }
     }
 
-    //console.log(hashmap)
-
     let output = []
-
+    //combine all array Values as one array
     for(let key in hashmap){
-        //console.log(hashmap[key])
         output = output.concat(hashmap[key])
-        //console.log(output)
     }
     
-
     return output
 };
