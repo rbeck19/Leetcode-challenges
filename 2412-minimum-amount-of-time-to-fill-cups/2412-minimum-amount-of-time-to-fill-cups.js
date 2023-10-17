@@ -6,9 +6,10 @@ var fillCups = function(amount) {
 
     count = 0
 
-    while(true) {
-        //sort the array in decening order
-        amount.sort((a,b)=> b-a)    
+    amount.sort((a,b)=> b-a) 
+
+    while(amount[0] > 0) {
+   
         //IF amount[0] and amount[1] have value take away 1 from both and add count
         //ELSE IF amount[0] has value and amount[1] no longer does. remove 1 and add count
         //ELSE all amount are 0, end the loop
@@ -19,9 +20,10 @@ var fillCups = function(amount) {
         } else if(amount[0] > 0) {
             amount[0]--
             count++
-        } else {
-            break
-        }
+        } 
+
+        //sort the array in decening order
+        amount.sort((a,b)=> b-a)  
     }
 
     return count
