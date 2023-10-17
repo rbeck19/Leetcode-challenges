@@ -7,7 +7,6 @@ var daysBetweenDates = function(date1, date2) {
     
     let timeDiff = (new Date(date1).getTime()) - (new Date(date2).getTime())
 
-    console.log(timeDiff)
 
     //let d1 = new Date(date1).getTime()
     //let d2 = new Date(date1).getTime()
