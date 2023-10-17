@@ -35,12 +35,9 @@ var getRow = function(rowIndex) {
               //push the element based on the previous row 1 before j and current j 
               row.push(tri[i-1][j-1] + tri[i-1][j])
           }
-          //add new row to triangle
       }
+      //add new row to triangle
        tri.push(row)
     }
-
-    
     return tri[rowIndex]
-
 };
