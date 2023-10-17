@@ -10,12 +10,11 @@ var daysBetweenDates = function(date1, date2) {
     let d2 = new Date(date2).getTime()
 
 
-
     let timeDiff = Math.abs(d1 - d2)
 
 
-    let dayDiff = timeDiff / (1000 * 3600 * 24)
+    let dayDiff = Math.abs(d1 - d2) / (1000 * 3600 * 24)
 
-    return dayDiff
+    return Math.abs(d1 - d2) / (1000 * 3600 * 24)
 
 };
