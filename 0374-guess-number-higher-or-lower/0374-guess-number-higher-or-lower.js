@@ -13,12 +13,6 @@
  */
 var guessNumber = function(n) {
     
-    console.log(n)
-    //guess(n)
-
-    //highst num
-    let max = n
-    let min = 1
     let num = Math.floor(n / 2)
     
     while(true){
