@@ -20,9 +20,5 @@ var hardestWorker = function(n, logs) {
         start = logs[i][1]
     }
 
-console.log(longest, worker, start)
-
-
     return worker
-
 };
