@@ -8,6 +8,7 @@ var backspaceCompare = function(s, t) {
     let newS = []
     let newT = []
 
+    //loop through s if it is a # then delete the last letter
     for (let i = 0; i < s.length; i++){
         if(s[i] === "#") {
             newS.pop()
