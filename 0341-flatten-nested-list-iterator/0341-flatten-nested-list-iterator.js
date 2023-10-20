@@ -35,8 +35,6 @@ var NestedIterator = function(nestedList) {
     for (let i = nestedList.length - 1; i >= 0; i--) {
         this.arr.push(nestedList[i]);
     }
-    console.log(this.arr)
-
 };
 
 
