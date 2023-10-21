@@ -5,6 +5,10 @@
 var separateDigits = function(nums) {
     
 
+    let string = nums.join("")
+    console.log(string)
+    return [...string + ""].map(n=> + n)
+
     const seperation = []
 
     for(let i = 0; i < nums.length; i++) {
