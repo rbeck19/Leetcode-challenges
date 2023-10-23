@@ -22,6 +22,5 @@ var findKthPositive = function(arr, k) {
         }
         expected += 1  //adjust the next expected number
     }
-
     return missing
 };
