@@ -45,15 +45,4 @@ var canFinish = function(numCourses, prerequisites) {
     }
 
     return true
-
-    // let courseTaken = 0
-    // prerequisites = prerequisites.sort((a,b) => a[0] - b[0])
-    // for(let i = 0; i < prerequisites.length; i++) {
-    //     if(prerequisites[0] > courseTaken) {
-    //         courseTaken = prerequisites[0]
-    //     } else {
-    //         return false
-    //     }
-    // }
-    // return true
 };
