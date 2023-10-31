@@ -38,7 +38,7 @@ var divide = function(dividend, divisor) {
         result++
     }
 
-
+    //check if number is to be positive or negative
     if( (dividentPos === true && divisorPos === true) || (dividentPos === false && divisorPos === false) ) {
          //return result
     }else {
