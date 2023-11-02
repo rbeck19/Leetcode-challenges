@@ -16,10 +16,10 @@ var guessNumber = function(n) {
     let num = Math.floor(n / 2)
     let min = 1
     let max = n
-    console.log(num)
+   
+   //check 
     while(true){
         let check = guess(num)
-        console.log(check, num)
         if (check === -1) {
             max = num - 1
             num = Math.floor((max + min) / 2)
