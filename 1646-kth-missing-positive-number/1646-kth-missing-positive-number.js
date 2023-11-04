@@ -22,5 +22,5 @@ var findKthPositive = function(arr, k) {
         }
         expected += 1  //adjust the next expected number
     }
-    return missing
+    return missing //return the number of missing after for loop ends
 };
