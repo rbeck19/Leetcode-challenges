@@ -9,9 +9,8 @@ var countElements = function(nums) {
         return 0
     }
 
-
+    //sort nums in acesnding order
     nums.sort((a,b) => a -b)
-    console.log(nums)
 
     let count = 0
     //loop through all nums between the min and max number
@@ -20,7 +19,6 @@ var countElements = function(nums) {
         if (nums[i] > nums[0] && nums[i] < nums[nums.length - 1]) {
             count += 1
         }
-        console.log(nums[i], count)
     }
 
     return count
