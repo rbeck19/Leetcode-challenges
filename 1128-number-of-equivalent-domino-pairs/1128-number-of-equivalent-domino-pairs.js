@@ -8,19 +8,17 @@ var numEquivDominoPairs = function(dominoes) {
     let hashmap = {}
     let count = 0
 
-    for( let [a,b] of dominoes) {
-        let key = a<b ? `${a}${b}` : `${b}${a}`
-        if(!hashmap[key]) {
+    for( let [a,b] of dominoes) { //loop through array with [a,b] representing domioes value
+        let key = a<b ? `${a}${b}` : `${b}${a}`  //set key at string on sorted numbers
+        if(!hashmap[key]) {  //create key 
             hashmap[key] = 1
-        } else {
+        } else {    //key exisit 
             hashmap[key] += 1
-            if ( hashmap[key] === 2 ) {
-                //console.log("count add 1")
+            if ( hashmap[key] === 2 ) {  // only 1 pay
                 count += 1
-            } else {
-                //console.log("in the else")
-                count -= ( hashmap[key] - 1) * (hashmap[key] - 2) / 2 
-                count += ( hashmap[key] * (hashmap[key] - 1) / 2 )
+            } else { //
+                count -= ( hashmap[key] - 1) * (hashmap[key] - 2) / 2  //remove number of past pair mathces
+                count += ( hashmap[key] * (hashmap[key] - 1) / 2 ) //add the new pair number
    
             }
         }
