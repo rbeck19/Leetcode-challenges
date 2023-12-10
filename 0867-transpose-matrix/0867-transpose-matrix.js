@@ -9,6 +9,7 @@ var transpose = function(matrix) {
     // Collumns  () => new Array(matrix.length).fill(0)
     const result = Array.from({length: matrix[0].length}, () => new Array(matrix.length).fill(0))
 
+    //loop through an place the swapped row collumn into result array
     for(let i = 0; i < matrix.length; i++) {
         //looking at nested array value
         for(let j = 0; j < matrix[i].length; j++) {
