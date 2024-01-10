@@ -3,6 +3,44 @@
  * @return {boolean}
  */
 var isValid = function (s) {
+
+    //if odd number os s length return false
+    if(s.length % 2 === 1){
+        return false
+    }
+
+    const brackets = {
+        "(" : ")",
+        "[" : "]",
+        "{" : "}"
+    }      
+    //track what closing bracket i need
+    const stack = []
+
+    //loop through array
+    for(let i = 0; i < s.length; i++) {
+        if(brackets[s[i]]) { 
+            //if its a opening bracket, push the closed bracket to the stack
+            stack.push(brackets[s[i]])
+        } else if (stack[stack.length - 1] === s[i]){
+            //the last bracket of the stack is the proper closing bracket
+            //remove the closeing from the stack
+            stack.pop()
+        } else {
+            //not a proper 
+            return false
+        }
+    }
+
+    return stack.length === 0 ? true : false
+
+
+
+
+
+
+
+
   //   //split the string into an array of single characters
   //   //run a loop to check that every 2 characters contains the same open and close bracket
 
@@ -51,35 +89,38 @@ var isValid = function (s) {
   // }
 
 
+// -----------
+
+
   //if length of the string is odd missing a bracket auto false
-  if(s.length % 2 === 1) {
-    return false
-  }
+//   if(s.length % 2 === 1) {
+//     return false
+//   }
 
-  const hashMap = {
-    "(": ")",
-    "{": "}",
-    "[": "]",
-  };
-  const stack = [];
+//   const hashMap = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
+//   const stack = [];
 
-  //loop through each character of the string
-  for (let ch of s) {
-    if (hashMap[ch]) {
-      //ch is an opening bracket
-      //add value of the key.  add the cllosing bracket to the stack
-      stack.push(hashMap[ch]);
-    } else if (stack.length > 0 && stack[stack.length - 1] === ch) {
-      //ch is a closing bracket and top of the stack matches
-      //remove the closing braket
-      stack.pop();
-    } else {
-      //ch is a closing brakcet and top of the stack doesnt match
-      return false
-    }
-    console.log(stack)
-  }
+//   //loop through each character of the string
+//   for (let ch of s) {
+//     if (hashMap[ch]) {
+//       //ch is an opening bracket
+//       //add value of the key.  add the cllosing bracket to the stack
+//       stack.push(hashMap[ch]);
+//     } else if (stack.length > 0 && stack[stack.length - 1] === ch) {
+//       //ch is a closing bracket and top of the stack matches
+//       //remove the closing braket
+//       stack.pop();
+//     } else {
+//       //ch is a closing brakcet and top of the stack doesnt match
+//       return false
+//     }
+//     console.log(stack)
+//   }
 
-  //return true is there are no left over brackets in the stack
-  return stack.length === 0;
+//   //return true is there are no left over brackets in the stack
+//   return stack.length === 0;
 };
